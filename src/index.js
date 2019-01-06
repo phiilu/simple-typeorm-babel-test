@@ -10,7 +10,7 @@ createConnection()
 
     const accountRepository = connection.getRepository(Account);
     let accounts = await accountRepository.find({
-      relations: ["domain", "domain"]
+      relations: ["domain", "domain.accounts"]
     });
     console.log(accounts);
   })
